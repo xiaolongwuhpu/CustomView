@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/common_toolbar" />
+        <TextView
+            android:text="图片 X轴REPEAT,Y轴MIRROR \n 17种PorterDuff.Mode模式 "
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="50dp" />
+
+        <com.longwu.learncustomview.view.shaderview.ComposeShaderView
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            custom:pstyle="0" />
+
+        <com.longwu.learncustomview.view.shaderview.ComposeShaderView
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            custom:pstyle="1" />
+
+        <com.longwu.learncustomview.view.shaderview.ComposeShaderView
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            custom:pstyle="2" />
+        <com.longwu.learncustomview.view.shaderview.ComposeShaderView
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            custom:pstyle="3" />
+
+        <com.longwu.learncustomview.view.shaderview.ComposeShaderView
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            custom:pstyle="4" />
+
+        <com.longwu.learncustomview.view.shaderview.ComposeShaderView
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            custom:pstyle="5" />
+
+        <com.longwu.learncustomview.view.shaderview.ComposeShaderView
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            custom:pstyle="6" />
+
+        <com.longwu.learncustomview.view.shaderview.ComposeShaderView
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            custom:pstyle="7" />
+
+        <com.longwu.learncustomview.view.shaderview.ComposeShaderView
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            custom:pstyle="8" />
+
+        <com.longwu.learncustomview.view.shaderview.ComposeShaderView
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            custom:pstyle="9" />
+
+        <com.longwu.learncustomview.view.shaderview.ComposeShaderView
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            custom:pstyle="10" />
+
+        <com.longwu.learncustomview.view.shaderview.ComposeShaderView
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            custom:pstyle="11" />
+
+        <com.longwu.learncustomview.view.shaderview.ComposeShaderView
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            custom:pstyle="12" />
+
+        <com.longwu.learncustomview.view.shaderview.ComposeShaderView
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            custom:pstyle="13" />
+
+        <com.longwu.learncustomview.view.shaderview.ComposeShaderView
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            custom:pstyle="14" />
+        <com.longwu.learncustomview.view.shaderview.ComposeShaderView
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            custom:pstyle="15" />
+        <com.longwu.learncustomview.view.shaderview.ComposeShaderView
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            custom:pstyle="16" />
+
+    </LinearLayout>
+
+</ScrollView>

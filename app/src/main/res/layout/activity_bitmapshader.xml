@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include layout="@layout/common_toolbar" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="10dp"
+            android:text=" CLAMP：当图片小于绘制尺寸进行边界拉伸来填充 \n REPEAT：当图片小于绘制尺寸时重复平铺 \n MIRROR：当图片小于绘制尺寸时镜像平铺 \n X轴方向→  +  Y轴方向↓" />
+
+        <com.longwu.learncustomview.view.shaderview.BitmapShaderView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            custom:pstyle="0" />
+
+        <com.longwu.learncustomview.view.shaderview.BitmapShaderView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            custom:pstyle="1" />
+
+        <com.longwu.learncustomview.view.shaderview.BitmapShaderView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            custom:pstyle="2" />
+        <com.longwu.learncustomview.view.shaderview.BitmapShaderView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            custom:pstyle="3" />
+
+        <com.longwu.learncustomview.view.shaderview.BitmapShaderView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            custom:pstyle="4" />
+
+        <com.longwu.learncustomview.view.shaderview.BitmapShaderView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            custom:pstyle="5" />
+        <com.longwu.learncustomview.view.shaderview.BitmapShaderView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            custom:pstyle="6" />
+
+        <com.longwu.learncustomview.view.shaderview.BitmapShaderView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            custom:pstyle="7" />
+
+        <com.longwu.learncustomview.view.shaderview.BitmapShaderView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            custom:pstyle="8" />
+    </LinearLayout>
+
+</ScrollView>

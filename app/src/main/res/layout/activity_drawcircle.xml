@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar" />
+
+    <com.longwu.learncustomview.view.DrawCircleView
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        custom:radiuswidth="120dp"
+        custom:textSize="30sp"
+        custom:textColor="@color/identity_tips_color_ff962f"
+        custom:max="180"
+         />
+
+    <com.longwu.learncustomview.view.DrawCircleView
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        custom:radiuswidth="80dp"
+        custom:textSize="18sp"
+        custom:max="280"
+         />
+
+</LinearLayout>
+

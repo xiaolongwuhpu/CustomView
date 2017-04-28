@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
+
+    <include layout="@layout/common_toolbar" />
+
+    <Button
+        android:id="@+id/bitmapshader"
+        style="@style/common_button"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_common_shape"
+        android:onClick="bitmapshader"
+        android:text="bitmapshader"
+        android:textAllCaps="false"
+        android:textColor="#491700"
+        android:textSize="14dp" />
+    <Button
+        android:id="@+id/sweepgradent"
+        style="@style/common_button"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_common_shape"
+        android:onClick="sweepgradent"
+        android:text="sweepgradent扫描/梯度渲染"
+        android:textAllCaps="false"
+        android:textColor="#491700"
+        android:textSize="14dp" />
+
+    <Button
+        android:id="@+id/radialgradient"
+        style="@style/common_button"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_common_shape"
+        android:onClick="radialgradient"
+        android:text="radialgradient环形渐变"
+        android:textAllCaps="false"
+        android:textColor="#491700"
+        android:textSize="14dp" />
+
+    <Button
+        android:id="@+id/composeshader"
+        style="@style/common_button"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_common_shape"
+        android:onClick="ComposeShader"
+        android:text="ComposeShader组合"
+        android:textAllCaps="false"
+        android:textColor="#491700"
+        android:textSize="14dp" />
+</LinearLayout>

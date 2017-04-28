@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#80ffffff</color>
+    <color name="colorPrimaryDark">#80E3E3E3</color>
+    <color name="colorAccent">#FF4081</color>
+    <!--&lt;!&ndash;标题栏的颜色&ndash;&gt;-->
+    <!--<color name="colorPrimary">#ffda44</color>-->
+    <!--&lt;!&ndash;状态栏的颜色&ndash;&gt;-->
+    <!--<color name="colorPrimaryDark">#ffda44</color>-->
+    <!--&lt;!&ndash;控件的选中颜色，即checked或selected状态的颜色。&ndash;&gt;-->
+    <!--<color name="colorAccent">#FF4081</color>-->
+    <!--按鈕顏色-->
+    <color name="btn_nomal_color">#ffda44</color>
+    <color name="btn_press_color">#c1e7f9</color>
+    <color name="btn_enable_color">#c5c5c5</color>
+    <color name="text_default_color">#491700</color>
+    <color name="check_tag_color">#29e4f5</color>
+    <color name="identity_tips_color_ff962f">#ff962f</color>
+    <color name="isentity_rectangle_pressed_color_cceffd">#cceffd</color>
+    <color name="shadow_view_color_faa33d">#faa33d</color>
+    <color name="transparent">#00000000</color>
+
+    <!--通用字体颜色-->
+    <color name="common_text_color">#393939</color>
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+
+    <!--標題顏色-->
+    <color name="title_text_color">#491700</color>
+
+
+    <!--通用触摸背景色-->
+    <color name="common_touch_bg">#E3E3E3</color>
+    <!--通用背景色-->
+    <color name="common_gray_bg">#EEEEEE</color>
+    <!--通用一级标题的颜色-->
+    <color name="common_h1">#212121</color>
+    <!--通用二级标题的颜色-->
+    <color name="common_h2">#727272</color>
+    <!--通用三级标题的颜色-->
+    <color name="common_h3">#B2B2B2</color>
+    <!--通用分割线细-->
+    <color name="common_divider_narrow">#E3E3E3</color>
+    <!--通用分割线粗-->
+    <color name="common_divider_wide">@color/light_white</color>
+    <color name="common_bg_color">#191919</color>
+    <color name="light_white">#EEEEEE</color>
+    <color name="tip">#88303F9F</color>
+
+    <!--杏仁分期-->
+    <!--通用背景色-->
+    <color name="common_bg">#f5f5f5</color>
+
+</resources>

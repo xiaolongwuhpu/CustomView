@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_enabled="false"    >
+        <shape android:shape="rectangle">
+            <!-- 填充 -->
+            <solid
+                android:color="@color/btn_enable_color"/><!-- 填充的颜色 -->
+            <!-- 描边 -->
+            <stroke
+                android:width="0.5dp"
+                android:color="#491700"
+                />
+            <!-- 圆角 -->
+            <corners android:radius="22dp"/><!-- 设置圆角半径 -->
+        </shape>
+    </item>
+
+    <item android:state_pressed="true" >
+        <shape android:shape="rectangle">
+            <!-- 填充 -->
+            <solid
+                android:color="@color/btn_press_color"/><!-- 填充的颜色 -->
+            <!-- 描边 -->
+            <stroke
+                android:width="0.5dp"
+                android:color="#491700"
+               />
+            <!-- 圆角 -->
+            <corners android:radius="22dp"/><!-- 设置圆角半径 -->
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <!-- 填充 -->
+            <solid
+                android:color="@color/btn_nomal_color"/><!-- 填充的颜色 -->
+            <!-- 描边 -->
+            <stroke
+                android:width="0.5dp"
+                android:color="#491700"
+                />
+            <!-- 圆角 -->
+            <corners android:radius="22dp"/><!-- 设置圆角半径 -->
+        </shape>
+    </item>
+
+</selector>

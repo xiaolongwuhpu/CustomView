@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <include layout="@layout/common_toolbar" />
+
+    <com.longwu.learncustomview.view.PicAndTextSimpleView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        custom:image="@mipmap/test"
+        custom:imageScaleType="center"
+        custom:titleText="速度与激情8 4.14全球首映 "
+        custom:titleTextColor="#ff0000"
+        custom:titleTextSize="30sp" />
+
+    <com.longwu.learncustomview.view.PicAndTextSimpleView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        custom:image="@mipmap/test"
+        custom:imageScaleType="center"
+        custom:titleText="速度与激情8 4.14全球首映 "
+        custom:titleTextColor="#00ff00"
+        custom:titleTextSize="20sp" />
+
+    <com.longwu.learncustomview.view.PicAndTextSimpleView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        custom:image="@mipmap/ic_launcher"
+        custom:imageScaleType="center"
+        custom:titleText="速度与激情8 4.14全球首映 "
+        custom:titleTextColor="#ff0000"
+        custom:titleTextSize="12sp" />
+</LinearLayout>
+
