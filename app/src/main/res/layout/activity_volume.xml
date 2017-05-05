@@ -8,36 +8,18 @@
 
     <include layout="@layout/common_toolbar" />
 
-    <com.longwu.learncustomview.view.DrawCircleView
+    <com.longwu.learncustomview.view.VolumeView
         android:id="@+id/cv1"
         android:layout_width="match_parent"
         android:layout_height="135dp"
-        custom:radiuswidth="120dp"
-        custom:textSize="30sp"
         custom:textColor="@color/identity_tips_color_ff962f"
-        custom:max="180"
-         />
-
-    <com.longwu.learncustomview.view.DrawCircleView
-        android:id="@+id/cv2"
-        android:layout_width="match_parent"
-        android:layout_height="135dp"
-        custom:radiuswidth="80dp"
-        custom:textSize="18sp"
-        custom:max="280"
          />
 
     <com.longwu.learncustomview.view.VolumeView
-        android:id="@+id/cv3"
+        android:id="@+id/cv2"
         android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:layout_margin="@dimen/dp_10"
-        custom:VolumefirstColor="@color/common_h2"
-        custom:VolumesecondColor="@color/identity_tips_color_ff962f"
-        custom:dotCount="15"
-        custom:splitSize="30"
-        custom:circleWidth="3dp"
-        />
+        android:layout_height="135dp"
+         />
 
 </LinearLayout>
 

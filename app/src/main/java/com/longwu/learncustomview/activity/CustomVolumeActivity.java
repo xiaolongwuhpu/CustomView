@@ -4,7 +4,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.provider.Settings;
 import android.view.View;
 import android.view.Window;
 
@@ -18,20 +17,20 @@ import butterknife.BindView;
  * Created by wujing on 2017/4/26 0026.
  */
 
-public class DrawCircleActivity extends BaseActivity {
-    DrawCircleActivity.MyThread MyThread;
+public class CustomVolumeActivity extends BaseActivity {
+    CustomVolumeActivity.MyThread MyThread;
     MyHandler myHandler;
 
-    @BindView(R.id.cv1)
-    DrawCircleView cv1;
-    @BindView(R.id.cv2)
-    DrawCircleView cv2;
+//    @BindView(R.id.cv1)
+//    DrawCircleView cv1;
+//    @BindView(R.id.cv2)
+//    DrawCircleView cv2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_drawcircle);
-        cv2.setColors(Color.RED,Color.YELLOW,Color.GREEN,Color.BLUE);
+        setContentView(R.layout.activity_volume);
         myHandler = new MyHandler();
         MyThread = new MyThread();
         new Thread(MyThread).start();
@@ -45,7 +44,7 @@ public class DrawCircleActivity extends BaseActivity {
             super.handleMessage(msg);
             switch (msg.what) {
                 case 1:
-                    cv1.setmMax((int) msg.obj);
+//                    cv1.setmMax((int) msg.obj);
                     break;
             }
         }

@@ -43,6 +43,9 @@ public class DrawCircleView extends View {
 
     public void setmMax(int mMax) {
         this.mMax = mMax;
+        invalidate();
+//        postInvalidate();
+
     }
 
     public float getmTextSize() {
@@ -77,12 +80,24 @@ public class DrawCircleView extends View {
         this.textColor = textColor;
     }
 
+    public int[] getColors() {
+        return new int[]{firstcolor,secondcolor,thirdcolor,fourthcolor};
+    }
+
+    public void setColors(int firstcolor, int secondcolor, int thirdcolor, int fourthcolor) {
+        this.firstcolor = firstcolor;
+        this.secondcolor = secondcolor;
+        this.thirdcolor = thirdcolor;
+        this.fourthcolor = fourthcolor;
+        invalidate();
+    }
+
     private int mMax = 120;
     private float mTextSize = 35;
     private float RadiusWidth = 0;
     private boolean textIsDisplayable;
     private int roundProgressColor, textColor, style;
-
+private  int firstcolor,secondcolor,thirdcolor,fourthcolor;
     public DrawCircleView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         mcontext = context;
@@ -92,7 +107,11 @@ public class DrawCircleView extends View {
         mTextSize = a.getDimension(R.styleable.RoundProgress_textSize, 45);
         roundProgressColor = a.getColor(R.styleable.RoundProgress_roundProgressColor, Color.GREEN);
         textColor = a.getColor(R.styleable.RoundProgress_textColor, Color.BLACK);
-        RadiusWidth = a.getDimension(R.styleable.RoundProgress_radiuswidth, 200)/2;
+        firstcolor = a.getColor(R.styleable.RoundProgress_firstColor, Color.BLUE);
+        secondcolor = a.getColor(R.styleable.RoundProgress_secondColor, Color.RED);
+        thirdcolor = a.getColor(R.styleable.RoundProgress_thirdColor, Color.YELLOW);
+        fourthcolor = a.getColor(R.styleable.RoundProgress_fourthColor, Color.GREEN);
+        RadiusWidth = a.getDimension(R.styleable.RoundProgress_radiuswidth, 200) / 2;
         textIsDisplayable = a.getBoolean(R.styleable.RoundProgress_textIsDisplayable, true);
         style = a.getInt(R.styleable.RoundProgress_style, 0);
         a.recycle();
@@ -104,24 +123,23 @@ public class DrawCircleView extends View {
     private void init() {
         mpaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mpaint.setStrokeWidth(15);
-        mpaint.setColor(Color.argb(50,80,80,80));
+        mpaint.setColor(Color.argb(50, 80, 80, 80));
         mpaint.setStyle(Paint.Style.STROKE);
-        t = (int)(mMax*1.0f/360*100)+"%";
+        t = (int) (mMax * 1.0f / 360 * 100) + "%";
         mRect = new Rect();
-        mSweepGradient = new SweepGradient(RadiusWidth, RadiusWidth, new int[]{Color.YELLOW,
-                Color.RED, Color.BLUE, Color.GREEN}, null/*new float[] { 0, .2F,
-                .6F, .9F }*/);
+//        mSweepGradient = new SweepGradient(RadiusWidth, RadiusWidth, new int[]{firstcolor, secondcolor, thirdcolor, fourthcolor}, null/*new float[] { 0, .2F,
+//                .6F, .9F }*/);
     }
-
     int textHeight = 0;
     int textWidth = 0;
-   private int Viewwidth= 200;
-   private int Viewheight= 200;
+    private int Viewwidth = 200;
+    private int Viewheight = 200;
+
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-         Viewwidth = getMySize(DensityUtils.dip2px(mcontext, 200), widthMeasureSpec);
-         Viewheight = getMySize(DensityUtils.dip2px(mcontext, 200), heightMeasureSpec);
+        Viewwidth = getMySize(DensityUtils.dip2px(mcontext, 200), widthMeasureSpec);
+        Viewheight = getMySize(DensityUtils.dip2px(mcontext, 200), heightMeasureSpec);
 
 //        if (Viewwidth < Viewheight) {
 //            RadiusWidth = Viewwidth/2;
@@ -154,16 +172,21 @@ public class DrawCircleView extends View {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        canvas.drawCircle(RadiusWidth, RadiusWidth, RadiusWidth -10, mpaint);
+        mSweepGradient = new SweepGradient(RadiusWidth, RadiusWidth, new int[]{firstcolor, secondcolor, thirdcolor, fourthcolor,firstcolor}, new float[] { 0, .2F,
+                .6F, .8F ,.9F});
+        t = (int) (mMax * 1.0f / 360 * 100) + "%";
+        mpaint.setStrokeWidth(15);
+        mpaint.setColor(Color.argb(50, 80, 80, 80));
+        canvas.drawCircle(RadiusWidth, RadiusWidth, RadiusWidth - 10, mpaint);
 
         mpaint.reset();
         mpaint.setStrokeWidth(15);
         mpaint.setAntiAlias(true);
         mpaint.setStyle(Paint.Style.STROKE);
         mpaint.setShader(mSweepGradient);
-        oval = new RectF( 10, 10,2*RadiusWidth-10, 2*RadiusWidth-10);
+        oval = new RectF(10, 10, 2 * RadiusWidth - 10, 2 * RadiusWidth - 10);
         mpaint.setStrokeCap(Paint.Cap.ROUND); //圆形 ,不设置也可以
-        canvas.drawArc(oval,-90,mMax,false,mpaint);
+        canvas.drawArc(oval, -90, mMax, false, mpaint); //// 根据进度画圆弧 矩形内切圆
 //        canvas.drawArc(50,50,200,200,-90,mMax,false,mpaint);
 
         mpaint.reset();
@@ -175,7 +198,7 @@ public class DrawCircleView extends View {
         mpaint.getTextBounds(t, 0, t.length(), mRect);
         textHeight = mRect.height() + getPaddingBottom() + getPaddingTop();
         textWidth = mRect.width() + getPaddingLeft() + getPaddingRight();
-        canvas.drawText(t, RadiusWidth-textWidth/2, RadiusWidth + textHeight / 2, mpaint);
+        canvas.drawText(t, RadiusWidth - textWidth / 2, RadiusWidth + textHeight / 2, mpaint);
     }
 
 

@@ -39,6 +39,7 @@
         <activity android:name=".activity.PaintSetShader"></activity>
         <activity android:name=".activity.shader.BitmapShaderActivity"></activity>
         <activity android:name=".activity.DrawCircleActivity"></activity>
+        <activity android:name=".activity.CustomVolumeActivity"></activity>
     </application>
 
 </manifest>
